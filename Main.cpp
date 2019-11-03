@@ -12,7 +12,7 @@ using namespace std;
 //大质数生成函数5000-10000
 vector<int> iGenerateVec(void){
 	vector<int> ivec;
-	for(int i = 500; i != 800; i++){
+	for(int i = 5000; i != 10000; i++){
 		int j;
 		for(j = 2; j != i /2 + 1; j++){
 			if(i % j == 0){
@@ -57,7 +57,6 @@ pair<pair<int, int>, pair<int, int>> iGenerateKey(vector<int> &ivec){
     	e++;
 	}
 	pair<int, int> pair1(n_fst, e);
-	cout << pair1.first << " " << pair1.second << endl;
 	//私钥, 第二个值只取正整数 
 	m = 1;
 	while((e * m) % a != 1){
@@ -65,7 +64,6 @@ pair<pair<int, int>, pair<int, int>> iGenerateKey(vector<int> &ivec){
 	} 
 	//m + ka 都可以是第二个值 
 	pair<int, int> pair2(n_fst, m);
-	cout << pair2.first << " " << pair2.second << endl; 
 	return make_pair(pair1, pair2);
 } 
 //加密函数
