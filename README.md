@@ -1,2 +1,2 @@
 # myRSA
-my own RSA with simple realizitoin
+my own RSA with simple realizitoin(c++)
